@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Pharmacy Login</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1 class="text-center">Pharmacy Login</h1>
+        <div class="border rounded p-2 w-25 mx-auto">
+            <b>{{message}}</b>
+            <form method="post" action="/pharmacy_login">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input class="form-control" type="text" name="pharmacy_id" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input class="form-control"  type="password" name="access_code" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+            </form>
+        </div>
+    </body>
+</html>

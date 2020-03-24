@@ -1,0 +1,21 @@
+This is a way for pharmacies to deliver medicine to people who can't leave the house.
+During social distancing, it's indispensable that the elderly stay inside so as to avoid risks as much as possible.
+We believe the best way for them to receive their medicine is via delivery from the pharmacy.
+
+How would it work for the pharmacy?
+ - The pharmacy receives a request for a delivery
+ - They verify that the address is correct
+ - They verify that the medicine has not already been sent
+ - They select the medicine from their inventory and deliver it
+ - The delivery driver confirms that the medicine has been dropped off
+   IN PERSON (not left on the front porch or etc.)
+
+How would it work for the user?
+ - They keep track of their prescriptions
+ - On the pharmacy website, they somehow provide proof of who they are
+ - They submit payment
+ - Once they are approved, they receive a notification that the medicine is being delivered
+ - Via the website, they can track the shipping
+ - They get the medicine, and clear instructions for how to take it
+
+

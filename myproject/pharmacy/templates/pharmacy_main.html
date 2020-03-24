@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pharmacy Main Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="/static/js/incoming_orders.js" type="text/javascript"></script>
+        <style type="text/css">
+            .nav-item {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body onload="start_requesting_orders();">
+        <h1 class="text-center">Pharmacy</h1>
+        <div class="d-flex align-items-center justify-content-center">
+            <a href="/" class="navbar-brand nav-item">Home</a>
+            <span class="nav-item">Logged in</span>
+            <a href="/pharmacy_logout" class="nav-item">Log out</a>
+        </div>
+        <hr/>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <b>Incoming orders</b>
+                    <hr/>
+                    <table id="incoming-orders" class="table">
+                        <thead>
+                            <tr>
+                                <th>Address</th>
+                                <th>Message</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm">
+                    <b>Other stuff</b>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
