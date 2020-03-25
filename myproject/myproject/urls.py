@@ -14,9 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from pharmacy.views import pharmacy_login, pharmacy_main, pharmacy_logout, api_orders, api_patient
+from pharmacy.views import pharmacy_login, pharmacy_main, pharmacy_logout
+from pharmacy.api import api_urls
 from pillapp.views import main_page
 
 urlpatterns = [
@@ -26,8 +27,7 @@ urlpatterns = [
     path('pharmacy_login', pharmacy_login),
     path('pharmacy_logout', pharmacy_logout),
 
-    path('api_orders', api_orders),
-    path('api_patient/<int:patient_id>', api_patient),
-
+    path('api/', include(api_urls)),
+    
     path('', main_page)
 ]

@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
 
 from pillapp.models import verify_login, get_orders, get_patients
 
@@ -31,21 +30,3 @@ def pharmacy_main(request):
 def pharmacy_logout(request):
     del request.session['pharmacy_id']
     return redirect("/")
-
-def api_orders(request):
-    if 'pharmacy_id' not in request.session:
-        return JsonResponse({"status": "error", "error_message": "need_login"})
-    
-    pharmacy_id = request.session['pharmacy_id']
-    orders = get_orders(pharmacy_id)
-    return JsonResponse({"orders": orders})
-
-def api_patient(request, patient_id):
-    if 'pharmacy_id' not in request.session:
-        return JsonResponse({"status": "error", "error_message": "need_login"})
-
-    patients = get_patients(patient_id)
-    if len(patients) == 0:
-        return JsonResponse({"status": "error", "error_message": "patient_not_found"})
-    else:
-        return JsonResponse({"patient": patients[0]})

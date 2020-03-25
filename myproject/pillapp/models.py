@@ -44,8 +44,13 @@ def verify_login(pharmacy_id, access_code):
     else:
         return False
 
-def get_orders(pharmacy_id):
-    query_results = Order.objects.filter(pharmacy_id=pharmacy_id).order_by("-order_date")
+def get_orders(pharmacy_id, order_id=None):
+    query_results = Order.objects.filter(pharmacy_id=pharmacy_id)
+    
+    if order_id:
+        query_results = query_results.filter(order_id=order_id)
+        
+    query_results = query_results.order_by("-order_date")
     pharmacy_orders = list(query_results.values())
     for x in range(len(pharmacy_orders)):
         pharmacy_orders[x]['patient_email'] = query_results[x].patient.patient_email
