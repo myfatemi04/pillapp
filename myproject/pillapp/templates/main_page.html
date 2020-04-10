@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pharmacy Main Page</title>
+        <title>Welcome</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1 class="text-center">Welcome to PillApp</h1>
-        <div class="border rounded p-2 text-center" style="margin-left: 100px; margin-right: 100px;">
-            Click a button below to get started.<br/>
-            <a class="btn btn-primary m-2" href="/pharmacy">I am logging in to manage a pharmacy</a>
-            <a class="btn btn-primary m-2" href="/patient">I am logging in to order a prescription</a>
+        <div class="text-center text-white" style="background-color: #ff8c00; padding-bottom: 25px;">
+            <h1 class="text-center display-1">Prescription Delivery</h1>
+            <h3 class="text-center font-weight-light">with Medisend</h3>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-light m-2" href="/patient" style="font-size: 2rem;">Request a prescription delivery from your pharmacy</a>
+        </div>
+        <div class="text-center">
+            Manage a pharmacy? <a href="/pharmacy">Click here</a> to view recent orders.
         </div>
     </body>
 </html>

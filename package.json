@@ -1,0 +1,35 @@
+{
+  "name": "pill-app",
+  "version": "1.0.0",
+  "description": "Prescription Deliveries Online",
+  "main": "pillapp.js",
+  "scripts": {
+    "test": "node pillapp.js",
+    "start": "node pillapp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myfatemi04/pillapp.git"
+  },
+  "keywords": [
+    "coronavirus",
+    "covid-19",
+    "nodejs",
+    "mysql"
+  ],
+  "author": "Michael Fatemi and Akshan Sameullah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myfatemi04/pillapp/issues"
+  },
+  "homepage": "https://github.com/myfatemi04/pillapp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "firebase": "^7.14.0",
+    "firebase-admin": "^8.10.0",
+    "http": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "url": "^0.11.0"
+  }
+}

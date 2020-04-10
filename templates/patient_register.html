@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Patient Registration</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="text-center text-white" style="background-color: #ff8c00; padding-bottom: 25px;">
+            <h1 class="display-1">Patient Registration</h1>
+            <a class="text-white" href="/">Go back</a>
+        </div>
+        <div class="border rounded p-2 w-25 mx-auto" style="margin-top: 25px;">
+            <b>{{message}}</b>
+            <form method="post" action="/patient_register" style="margin-block-end: 0;">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="patient_email">Email</label>
+                    <input class="form-control" type="email" name="patient_email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="patient_firstname">First name</label>
+                    <input class="form-control" type="text" name="patient_firstname" placeholder="First name" required>
+                </div>
+                <div class="form-group">
+                    <label for="patient_lastname">First name</label>
+                    <input class="form-control" type="text" name="patient_lastname" placeholder="Last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="patient_password">Password</label>
+                    <input class="form-control"  type="password" name="patient_password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-light">Log in</button>
+            </form>
+        </div>
+    </body>
+</html>

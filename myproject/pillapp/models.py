@@ -7,7 +7,7 @@ class Patient(models.Model):
     patient_id = models.IntegerField(primary_key=True)
     patient_firstname = models.CharField(max_length=255)
     patient_lastname = models.CharField(max_length=255)
-    patient_email = models.CharField(max_length=255)
+    patient_email = models.CharField(max_length=320)
     password_hash = models.CharField(max_length=255)
 
 class Pharmacy(models.Model):

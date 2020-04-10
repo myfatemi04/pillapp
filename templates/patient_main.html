@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Patient</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="/js/order_tracker.js"></script>
+    </head>
+    <body onload="init();">
+        <div class="sticky-top p-2 align-items-center d-flex border-bottom light-bg">
+            <img class="mx-2" src="/img/logo.png" style="border-radius: 5px; height: 2.5rem;">
+            <span class="mx-2 font-weight-bold" style="font-size: 2rem">The Pill Project</span>
+            <a href="/logout">
+                Logout
+            </a>
+        </div>
+        <div class="container" style="margin-top: 25px;">
+            <div class="row">
+                <div class="col-sm">
+                    <h3>Delivery tracker</h3>
+                    <a class="btn btn-light" id="refresh-orders">Refresh</a>
+                    <table class="table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 75%;">
+                                    Message
+                                </th>
+                                <th style="width: 25%;">
+                                    Status
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="order-tracker">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm">
+                    <h3>Request a delivery</h3>
+                    <hr/>
+                    <div>
+                        <div class="form-group">
+                            <label for="message">
+                                Message
+                            </label>
+                            <textarea class="form-control" id="message" placeholder="Message" name="message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">
+                                Address
+                            </label>
+                            <input class="form-control" type="text" id="address" name="address">
+                        </div>
+                        <button id="request-delivery" class="btn btn-light">Request delivery</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,27 +1,27 @@
 <html>
     <head>
-        <title>Pharmacy Login</title>
+        <title>Patient Login</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="text-center text-white" style="background-color: #ff8c00; padding-bottom: 25px;">
-            <h1 class="display-1">Pharmacy Login</h1>
+            <h1 class="display-1">Patient Login</h1>
             <a class="text-white" href="/">Go back</a>
         </div>
         <div class="border rounded p-2 w-25 mx-auto" style="margin-top: 25px;">
             <b>{{message}}</b>
-            <form method="post" action="/pharmacy_login" style="margin-block-end: 0;">
+            <form method="post" action="/patient_login" style="margin-block-end: 0;">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="pharmacy_id">Pharmacy name</label>
-                    <input class="form-control" type="text" name="pharmacy_id" placeholder="Username">
+                    <label for="patient_email">Email</label>
+                    <input class="form-control" type="email" name="patient_email" placeholder="Email">
                 </div>
                 <div class="form-group">
-                    <label for="access_code">Password</label>
-                    <input class="form-control"  type="password" name="access_code" placeholder="Password">
+                    <label for="patient_password">Password</label>
+                    <input class="form-control"  type="password" name="patient_password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-light">Log in</button>
+                <button type="submit" class="btn btn-light">Log in</button> or <a href="/patient_register" class="btn btn-light">Create an account</a>
             </form>
         </div>
     </body>

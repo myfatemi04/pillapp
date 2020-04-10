@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <style>
+            .orange-gradient {
+                background: linear-gradient(#fe7019, #f9c700);
+                background-repeat: no-repeat;
+                background-position: right top;
+            }
+            .body {
+                height: 100vh;
+                width: 100vw;
+            }
+            .light-bg {
+                background-color: #FFFFFF;
+            }
+            .light-button {
+                background-color: #FFFFFF;
+            }
+            .light-button:hover {
+                background-color: #EEEEEE;
+            }
+        </style>
+    </head>
+    <body class="orange-gradient body">
+        <div class="sticky-top p-2 align-items-center d-flex border-bottom light-bg">
+            <img class="mx-2" src="/img/logo.png" style="border-radius: 5px; height: 2.5rem;">
+            <span class="mx-2 font-weight-bold" style="font-size: 2rem">The Pill Project</span>
+        </div>
+        <div class="text-center">
+            <a class="btn light-button m-2" href="/patient" style="font-size: 2rem;">Request a prescription delivery from your pharmacy</a><br/>
+            <span class="text-white">
+                Manage a pharmacy? <a class="text-white" style="text-decoration: underline;" href="/pharmacy">Click here</a> to view recent orders.
+            </span>
+        </div>
+    </body>
+</html>
