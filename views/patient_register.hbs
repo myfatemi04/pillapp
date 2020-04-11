@@ -2,17 +2,21 @@
     <head>
         <title>Patient Registration</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/theme.css">
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
-    <body>
-        <div class="text-center text-white" style="background-color: #ff8c00; padding-bottom: 25px;">
-            <h1 class="display-1">Patient Registration</h1>
-            <a class="text-white" href="/">Go back</a>
+    <body class="orange-gradient body">
+        <div class="light-bg sticky-top p-2 align-items-center d-flex border-bottom light-bg">
+            <a href="/">
+                <img class="mx-2" src="/img/logo.png" style="border-radius: 5px; height: 2.5rem;">
+            </a>
+            <span class="mx-2 font-weight-bold" style="font-size: 2rem">The Pill Project</span>
         </div>
-        <div class="border rounded p-2 w-25 mx-auto" style="margin-top: 25px;">
+        <div class="light-bg border rounded p-2 w-25 mx-auto" style="margin-top: 2.5rem;">
+            <h1>Register</h1>
             <b>{{message}}</b>
             <form method="post" action="/patient_register" style="margin-block-end: 0;">
-                {% csrf_token %}
                 <div class="form-group">
                     <label for="patient_email">Email</label>
                     <input class="form-control" type="email" name="patient_email" placeholder="Email" required>

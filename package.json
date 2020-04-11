@@ -28,7 +28,10 @@
     "express-session": "^1.17.0",
     "firebase": "^7.14.0",
     "firebase-admin": "^8.10.0",
+    "hbs": "^4.1.1",
+    "html": "^1.0.0",
     "http": "0.0.1-security",
+    "mustache": "^4.0.1",
     "mysql": "^2.18.1",
     "url": "^0.11.0"
   }

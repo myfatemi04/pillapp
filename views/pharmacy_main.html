@@ -4,10 +4,11 @@
         <title>Pharmacy Main Page</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+        <link rel="stylesheet" href="/css/theme.css">
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="/static/js/incoming_orders.js" type="text/javascript"></script>
+        <script src="/js/incoming_orders.js" type="text/javascript"></script>
         <style type="text/css">
             .nav-item {
                 margin-left: 10px;
@@ -16,17 +17,19 @@
         </style>
     </head>
     <body onload="init();">
-        <div class="text-center text-white" style="background-color: #ff8c00;">
-            <h1 class="text-center display-1">Pharmacy</h1>
-            <div class="d-flex align-items-center justify-content-center">
-                <a href="/" class="navbar-brand nav-item text-white">Home</a>
-                <a href="/pharmacy_logout" class="nav-item text-white">Log out</a>
-            </div>
+        <div class="light-bg sticky-top p-2 align-items-center d-flex border-bottom light-bg">
+            <a href="/">
+                <img class="mx-2" src="/img/logo.png" style="border-radius: 5px; height: 2.5rem;">
+            </a>
+            <span class="mx-2 font-weight-bold" style="font-size: 2rem">The Pill Project</span>
+            <a href="/logout">
+                Logout
+            </a>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <span class="font-weight-light" style="font-size: 4rem;">Orders</span><br/>
+                    <span class="font-weight-light" style="font-size: 4rem;">Pharmacy Dashboard</span><br/>
                     <a id="refresh-orders" class="btn btn-light mb-2">Refresh</a>
                 </div>
             </div>

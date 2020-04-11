@@ -2,24 +2,26 @@
     <head>
         <title>Pharmacy Login</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/theme.css">
+        
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="text-center text-white" style="background-color: #ff8c00; padding-bottom: 25px;">
-            <h1 class="display-1">Pharmacy Login</h1>
-            <a class="text-white" href="/">Go back</a>
+        <div class="sticky-top p-2 align-items-center d-flex border-bottom light-bg">
+            <img class="mx-2" src="/img/logo.png" style="border-radius: 5px; height: 2.5rem;">
+            <span class="mx-2 font-weight-bold" style="font-size: 2rem">The Pill Project</span>
         </div>
         <div class="border rounded p-2 w-25 mx-auto" style="margin-top: 25px;">
+            <h1>Login</h1>
             <b>{{message}}</b>
             <form method="post" action="/pharmacy_login" style="margin-block-end: 0;">
-                {% csrf_token %}
                 <div class="form-group">
                     <label for="pharmacy_id">Pharmacy name</label>
-                    <input class="form-control" type="text" name="pharmacy_id" placeholder="Username">
+                    <input class="form-control" type="text" name="pharmacy_username" placeholder="Username">
                 </div>
                 <div class="form-group">
                     <label for="access_code">Password</label>
-                    <input class="form-control"  type="password" name="access_code" placeholder="Password">
+                    <input class="form-control"  type="password" name="pharmacy_password" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-light">Log in</button>
             </form>

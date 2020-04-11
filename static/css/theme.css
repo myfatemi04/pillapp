@@ -1,0 +1,18 @@
+.orange-gradient {
+    background: linear-gradient(#fe7019, #f9c700);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.body {
+    height: 100vh;
+    width: 100vw;
+}
+.light-bg {
+    background-color: #FFFFFF;
+}
+.light-button {
+    background-color: #FFFFFF;
+}
+.light-button:hover {
+    background-color: #EEEEEE;
+}

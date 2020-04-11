@@ -14,8 +14,7 @@ function request_new_orders() {
     $.getJSON(
         "/api/orders/tracker",
         function(orders) {
-            if (orders['status'] == 'success')
-                add_orders(orders['orders']);
+            add_orders(orders);
         }
     );
 }
@@ -38,46 +37,29 @@ function add_orders(orders) {
 function request_delivery() {
     let message = $("#message")[0].value;
     let address = $("#address")[0].value;
+    let pharmacy = $("#pharmacy")[0].value;
     $.post(
         "/api/orders/request",
         {
             "message": message,
-            "address": address
+            "address": address,
+            "pharmacy": pharmacy
         },
         function(data, status) {
-
+            $("#message")[0].value = "";
+            $("#address")[0].value = "";
+            $("#pharmacy").val("");
+            $("#send-status")[0].innerHTML = data;
+            setTimeout(() => { $("#send-status")[0].innerHTML = ""; }, 10000);
+            remove_old_orders();
+            request_new_orders();
         }
     )
-}
-
-function getCookie(c_name)
-{
-    if (document.cookie.length > 0)
-    {
-        let c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1)
-        {
-            c_start = c_start + c_name.length + 1;
-            let c_end = document.cookie.indexOf(";", c_start);
-            if (c_end == -1) c_end = document.cookie.length;
-            return unescape(document.cookie.substring(c_start,c_end));
-        }
-    }
-    return "";
- }
-
-function init_ajax_csrf() {
-    $(function () {
-        $.ajaxSetup({
-            headers: { "X-CSRFToken": getCookie("csrftoken") }
-        });
-    });
 }
 
 function init() {
     remove_old_orders();
     request_new_orders();
-    init_ajax_csrf();
     $("#request-delivery").click(
         function() {
             request_delivery();
